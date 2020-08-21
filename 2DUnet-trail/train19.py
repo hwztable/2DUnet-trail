@@ -1,5 +1,5 @@
 from unet2d import UNet2D
-from data_loader.data_brats19 import Brats19DataLoader
+from data_brats19 import Brats19DataLoader
 from test import evaluation
 
 from torch.utils.data import DataLoader
@@ -15,7 +15,7 @@ import torch.optim as optim
 import torch.nn.functional as F
 
 # ********** Hyper Parameter **********
-data_dir = '/data/keda2010/BraTS/MICCAI_BraTS_2019_Data_Training'
+data_dir = '/data/BraTS/MICCAI_BraTS_2019_Data_Training'
 conf_train = '/code/Myunet/train19.conf'
 conf_valid = '/code/Myunet/valid19.conf'
 save_dir = '/output/ckpt'
