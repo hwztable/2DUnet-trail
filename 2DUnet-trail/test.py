@@ -1,5 +1,5 @@
 from GhostModuleUnet0617 import GhostUNet2D
-from data_brats15 import Brats15DataLoader
+from data_brats19 import Brats19DataLoader
 
 from torch.utils.data import DataLoader
 from torch.autograd import Variable
@@ -180,7 +180,7 @@ if __name__ == "__main__":
     net = load_model()
 
     print('test data ....')
-    test_data = Brats15DataLoader(data_dir=data_dir, conf=conf_test, train=False)  # 30 subject, 4650 images
+    test_data = Brats19DataLoader(data_dir=data_dir, conf=conf_test, train=False)  # 30 subject, 4650 images
     test_dataset = DataLoader(dataset=test_data, batch_size=1, shuffle=False)
 
     weight = torch.from_numpy(test_data.weight).float()  # weight for all class
