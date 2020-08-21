@@ -1,4 +1,4 @@
-from GhostModuleUnet0617 import GhostUNet2D
+from unet2d import UNet2D
 from data_brats19 import Brats19DataLoader
 
 from torch.utils.data import DataLoader
@@ -161,7 +161,7 @@ def evaluation(net, test_dataset, criterion, save_dir=None):
 
 
 def load_model():
-    net = GhostUNet2D(4, 5, 64 ).to(torch.device('cpu')) 
+    net = UNet2D(4, 5, 64 ).to(torch.device('cpu')) 
     state_dict = torch.load(saved_model_path,map_location='cpu')
 #    state_dict = torch.load(saved_model_path)
     net.load_state_dict(state_dict,strict=True)
