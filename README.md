@@ -6,3 +6,5 @@ in this project, the Unet2d is mainly on single modal segmentaion; to change int
 
 In train19.py (240,250x3) should change to (240,250x6) for 3 modals,and range(1) should change to range(3) for size aligning.
 In dataloader19_brats, "if 'flair' in f :    # if is data or 't1' in f or 't1ce' in f or 't2' in f "->"if 'flair' in f or 't1' in f or 't1ce' in f or 't2' in f"
+
+for more demands as your needs and don't know how to use the code, you can contact me by messgages or raise an issue.
